@@ -55,8 +55,8 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 3px solid var(--blue);
+            background: rgba(255, 255, 255, 0.03);
+            border: 3px solid var(--blue); /* All lines are now solid */
             border-radius: 25px;
             padding: 35px;
             text-align: center;
@@ -66,25 +66,41 @@
             backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
 
         .card:hover {
             transform: translateY(-12px) scale(1.03);
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
             border-color: var(--pink);
         }
 
-        /* Specific style for Railway projects */
-        .railway {
-            border-style: dashed;
+        /* Slicker Badge/Host Block Style */
+        .badge {
+            font-size: 0.65rem;
+            background: rgba(157, 80, 187, 0.15);
+            border: 1px solid var(--purple);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px; /* Pill shape */
+            display: inline-block;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(157, 80, 187, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .card h2 {
             margin: 0;
             color: var(--blue);
             font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .card p {
@@ -96,16 +112,6 @@
 
         .card:hover h2 {
             color: var(--pink);
-        }
-
-        .badge {
-            font-size: 0.7rem;
-            background: var(--purple);
-            padding: 4px 8px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 10px;
-            text-transform: uppercase;
         }
     </style>
 </head>
@@ -121,14 +127,14 @@
         <a href="https://brinleyww.github.io/bringles-learning-site/" class="card">
             <span class="badge">GitHub Host</span>
             <h2>🎲 Chaos Launcher</h2>
-            <p>Access all the original silly games and things.</p>
+            <p>bringle's 100% real learning site</p>
         </a>
 
-        <!-- Button 2: Pringle Launcher (Railway) - ADJACENT to Chaos -->
-        <a href="https://pringle.up.railway.app/" class="card railway">
+        <!-- Button 2: Pringle Launcher (Railway) -->
+        <a href="https://pringle.up.railway.app/" class="card">
             <span class="badge">Railway Host</span>
             <h2>🥔 Pringle Launcher</h2>
-            <p>Alternate Chaos Launcher spinoff.</p>
+            <p>Alternate choas launcher domain</p>
         </a>
 
         <!-- Button 3: Energy Clicker -->
@@ -139,7 +145,7 @@
         </a>
 
         <!-- Button 4: Cord (Discord Spinoff) -->
-        <a href="https://cord.up.railway.app/" class="card railway">
+        <a href="https://cord.up.railway.app/" class="card">
             <span class="badge">Collab Project</span>
             <h2>💬 Cord</h2>
             <p>A Discord spinoff collaboration project.</p>
