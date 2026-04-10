@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bringle's Hub</title>
+    <title>BRINGLE'S GAME HUB</title>
     <style>
         :root {
             --pink: #ff5fa2;
             --blue: #38bdf8;
             --dark: #0f0f1a;
+            --purple: #9d50bb;
         }
 
         body {
@@ -22,7 +23,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            overflow: hidden;
+            padding: 20px;
         }
 
         /* Animated Background */
@@ -31,61 +32,80 @@
             inset: 0;
             z-index: -1;
             background: 
-                radial-gradient(circle at 20% 30%, #ff5fa215, transparent 40%),
-                radial-gradient(circle at 80% 70%, #38bdf815, transparent 40%),
+                radial-gradient(circle at 20% 30%, #ff5fa210, transparent 40%),
+                radial-gradient(circle at 80% 70%, #38bdf810, transparent 40%),
                 linear-gradient(120deg, #0f0f1a, #1a1a2e);
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--pink);
             text-shadow: 0 0 20px rgba(255, 95, 162, 0.5);
-            margin-bottom: 40px;
-            transform: rotate(-2deg);
+            margin-bottom: 50px;
+            transform: rotate(-1deg);
+            text-align: center;
         }
 
         .hub-container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 800px;
+            max-width: 1000px;
+            width: 100%;
         }
 
         .card {
             background: rgba(255, 255, 255, 0.05);
             border: 3px solid var(--blue);
-            border-radius: 20px;
-            padding: 30px;
-            width: 250px;
+            border-radius: 25px;
+            padding: 35px;
             text-align: center;
             text-decoration: none;
             color: white;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .card:hover {
-            transform: translateY(-10px) scale(1.05);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 30px var(--blue);
+            transform: translateY(-12px) scale(1.03);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3);
             border-color: var(--pink);
+        }
+
+        /* Specific style for Railway projects */
+        .railway {
+            border-style: dashed;
         }
 
         .card h2 {
             margin: 0;
             color: var(--blue);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
         .card p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             opacity: 0.8;
-            margin-top: 10px;
+            margin-top: 15px;
+            line-height: 1.4;
         }
 
         .card:hover h2 {
             color: var(--pink);
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            background: var(--purple);
+            padding: 4px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -93,22 +113,38 @@
 
     <div class="bg"></div>
 
-    <h1>🚀 BRINGLE'S HUB</h1>
+    <h1>🎮 BRINGLE'S GAME HUB</h1>
 
     <div class="hub-container">
-        <!-- Button 1: Learning Site -->
+        
+        <!-- Button 1: Chaos Launcher (GitHub) -->
         <a href="https://brinleyww.github.io/bringles-learning-site/" class="card">
-            <h2>🎮 Chaos Launcher</h2>
-            <p>Access all the silly games and things.</p>
+            <span class="badge">GitHub Host</span>
+            <h2>🎲 Chaos Launcher</h2>
+            <p>Access all the original silly games and things.</p>
         </a>
 
-        <!-- Button 2: Energy Clicker -->
+        <!-- Button 2: Pringle Launcher (Railway) - ADJACENT to Chaos -->
+        <a href="https://pringle.up.railway.app/" class="card railway">
+            <span class="badge">Railway Host</span>
+            <h2>🥔 Pringle Launcher</h2>
+            <p>Alternate Chaos Launcher spinoff.</p>
+        </a>
+
+        <!-- Button 3: Energy Clicker -->
         <a href="https://brinleyww.github.io/energy-clicker/" class="card">
+            <span class="badge">GitHub Host</span>
             <h2>⚡ Energy Clicker</h2>
             <p>The ultimate clicking experience.</p>
         </a>
 
-        <!-- Add more cards here as you make more sites! -->
+        <!-- Button 4: Cord (Discord Spinoff) -->
+        <a href="https://cord.up.railway.app/" class="card railway">
+            <span class="badge">Collab Project</span>
+            <h2>💬 Cord</h2>
+            <p>A Discord spinoff collaboration project.</p>
+        </a>
+
     </div>
 
 </body>
