@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bringle's Hub</title>
+    <style>
+        :root {
+            --pink: #ff5fa2;
+            --blue: #38bdf8;
+            --dark: #0f0f1a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: white;
+            font-family: "Comic Sans MS", cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Animated Background */
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 30%, #ff5fa215, transparent 40%),
+                radial-gradient(circle at 80% 70%, #38bdf815, transparent 40%),
+                linear-gradient(120deg, #0f0f1a, #1a1a2e);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--pink);
+            text-shadow: 0 0 20px rgba(255, 95, 162, 0.5);
+            margin-bottom: 40px;
+            transform: rotate(-2deg);
+        }
+
+        .hub-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 3px solid var(--blue);
+            border-radius: 20px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px var(--blue);
+            border-color: var(--pink);
+        }
+
+        .card h2 {
+            margin: 0;
+            color: var(--blue);
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .card:hover h2 {
+            color: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <h1>🚀 BRINGLE'S HUB</h1>
+
+    <div class="hub-container">
+        <!-- Button 1: Learning Site -->
+        <a href="https://brinleyww.github.io/bringles-learning-site/" class="card">
+            <h2>🎮 Chaos Launcher</h2>
+            <p>Access all the silly games and things.</p>
+        </a>
+
+        <!-- Button 2: Energy Clicker -->
+        <a href="https://brinleyww.github.io/energy-clicker/" class="card">
+            <h2>⚡ Energy Clicker</h2>
+            <p>The ultimate clicking experience.</p>
+        </a>
+
+        <!-- Add more cards here as you make more sites! -->
+    </div>
+
+</body>
+</html>
